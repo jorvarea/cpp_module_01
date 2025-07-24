@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
     find_and_replace(buffer, argv[2],argv[3]);
 
     std::string fout_name = std::string(argv[1]) + ".replace";
-    std::ofstream fout(fout_name);
+    std::ofstream fout(fout_name.c_str());
     if (!fout.is_open()) {
         std::cerr << "Error opening output file " << fout_name << std::endl;
         return 1;
